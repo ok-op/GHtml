@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Code Encoder</title>
+    <title>Python Code Decoder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,7 +12,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align items horizontally */
+            align-items: center;
             min-height: 100vh;
         }
 
@@ -23,7 +23,7 @@
 
         textarea {
             width: 80%;
-            max-width: 600px; /* Set a maximum width */
+            max-width: 600px;
             height: 200px;
             margin-bottom: 10px;
             padding: 20px;
@@ -35,25 +35,25 @@
         }
 
         .button-container {
-            display: flex; /* Use flexbox for the button container */
-            justify-content: center; /* Center align buttons */
-            margin: 10px 0; /* Margin for spacing */
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
         }
 
         button {
             padding: 10px 20px;
-            background-color: #007BFF;
+            background-color: #28a745;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 5px; /* Adjusted margin for buttons */
+            margin: 5px;
             box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
             transition: background-color 0.2s, transform 0.2s;
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #218838;
             transform: translateY(-2px);
         }
 
@@ -71,8 +71,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             white-space: pre-wrap;
             word-wrap: break-word;
-            max-width: 600px; /* Set a maximum width for output */
-            width: 100%; /* Full width */
+            max-width: 600px;
+            width: 100%;
         }
 
         footer {
@@ -82,35 +82,21 @@
             background-color: #007BFF;
             color: white;
             border-top: 1px solid #0056b3;
-            width: 100%; /* Make footer full width */
-        }
-
-        .footer-button {
-            background-color: #28a745;
-            padding: 10px 20px; /* Adjusted padding */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-        }
-
-        .footer-button:hover {
-            background-color: #218838;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>Python Code Encoder</h1>
-    <textarea id="codeInput" placeholder="Paste your Python code here..."></textarea>
+    <h1>Python Code Decoder</h1>
+    <textarea id="encodedInput" placeholder="Paste your encoded Python code here..."></textarea>
     
-    <div class="button-container"> <!-- Button container for centering -->
-        <button onclick="encodeCode()">Encode Code</button>
+    <div class="button-container">
+        <button onclick="decodeCode()">Decode Code</button>
         <button onclick="copyToClipboard()">Copy to Clipboard</button>
     </div>
     
-    <h2>Encoded Output:</h2>
+    <h2>Decoded Output:</h2>
     <div id="output"></div>
-    <br>
 
     <footer>
         <p>Follow us on Telegram</p>
@@ -118,26 +104,29 @@
     </footer>
 
     <script>
-        function encodeCode() {
-            const code = document.getElementById('codeInput').value;
-            if (code.trim() === '') {
-                document.getElementById('output').textContent = 'Please enter some code to encode.';
+        function decodeCode() {
+            const encodedInput = document.getElementById('encodedInput').value;
+            if (encodedInput.trim() === '') {
+                document.getElementById('output').textContent = 'Please enter some encoded code to decode.';
                 return;
             }
-            // Base64 encoding
-            const encoded = btoa(unescape(encodeURIComponent(code)));
-            document.getElementById('output').textContent = encoded;
+            try {
+                const decoded = decodeURIComponent(escape(atob(encodedInput)));
+                document.getElementById('output').textContent = decoded;
+            } catch (e) {
+                document.getElementById('output').textContent = 'Invalid encoded input. Please provide valid Base64 encoded data.';
+            }
         }
 
         function copyToClipboard() {
             const output = document.getElementById('output');
             if (output.textContent === '') {
-                alert('Nothing to copy. Please encode some code first.');
+                alert('Nothing to copy. Please decode some code first.');
                 return;
             }
             navigator.clipboard.writeText(output.textContent)
                 .then(() => {
-                    alert('Encoded output copied to clipboard!');
+                    alert('Decoded output copied to clipboard!');
                 })
                 .catch(err => {
                     console.error('Could not copy text: ', err);

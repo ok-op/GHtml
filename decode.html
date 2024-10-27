@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Encoder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align items horizontally */
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 80%;
+            max-width: 600px; /* Set a maximum width */
+            height: 200px;
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            resize: none;
+            font-family: 'Courier New', monospace;
+        }
+
+        .button-container {
+            display: flex; /* Use flexbox for the button container */
+            justify-content: center; /* Center align buttons */
+            margin: 10px 0; /* Margin for spacing */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px; /* Adjusted margin for buttons */
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-width: 600px; /* Set a maximum width for output */
+            width: 100%; /* Full width */
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            border-top: 1px solid #0056b3;
+            width: 100%; /* Make footer full width */
+        }
+
+        .footer-button {
+            background-color: #28a745;
+            padding: 10px 20px; /* Adjusted padding */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+
+        .footer-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Python Code Encoder</h1>
+    <textarea id="codeInput" placeholder="Paste your Python code here..."></textarea>
+    
+    <div class="button-container"> <!-- Button container for centering -->
+        <button onclick="encodeCode()">Encode Code</button>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
+    
+    <h2>Encoded Output:</h2>
+    <div id="output"></div>
+    <br>
+
+    <footer>
+        <p>Follow us on Telegram</p>
+        <a href="https://t.me/Opleech_WD" target="_blank" class="footer-button">Join Our Channel</a>
+    </footer>
+
+    <script>
+        function encodeCode() {
+            const code = document.getElementById('codeInput').value;
+            if (code.trim() === '') {
+                document.getElementById('output').textContent = 'Please enter some code to encode.';
+                return;
+            }
+            // Base64 encoding
+            const encoded = btoa(unescape(encodeURIComponent(code)));
+            document.getElementById('output').textContent = encoded;
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('output');
+            if (output.textContent === '') {
+                alert('Nothing to copy. Please encode some code first.');
+                return;
+            }
+            navigator.clipboard.writeText(output.textContent)
+                .then(() => {
+                    alert('Encoded output copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Could not copy text: ', err);
+                });
+        }
+    </script>
+</body>
+</html>

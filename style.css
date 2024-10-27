@@ -57,11 +57,12 @@ button:active {
 }
 footer {
     margin-top: auto;
-    padding: 20px;
+    padding: 30px; /* Increased padding */
     text-align: center;
     background-color: #007BFF;
     color: white;
     border-top: 1px solid #0056b3;
+    min-height: 60px; /* Set a minimum height */
 }
 .footer-button {
     background-color: #28a745;

@@ -24,6 +24,7 @@
             color: white;
             border: none;
             cursor: pointer;
+            margin-right: 10px;
         }
         button:hover {
             background-color: #0056b3;
@@ -42,6 +43,7 @@
     <h1>Python Code Encoder</h1>
     <textarea id="codeInput" placeholder="Paste your Python code here..."></textarea>
     <button onclick="encodeCode()">Encode Code</button>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
     
     <h2>Encoded Output:</h2>
     <div id="output"></div>
@@ -56,6 +58,21 @@
             // Base64 encoding
             const encoded = btoa(unescape(encodeURIComponent(code)));
             document.getElementById('output').textContent = encoded;
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('output');
+            if (output.textContent === '') {
+                alert('Nothing to copy. Please encode some code first.');
+                return;
+            }
+            navigator.clipboard.writeText(output.textContent)
+                .then(() => {
+                    alert('Encoded output copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Could not copy text: ', err);
+                });
         }
     </script>
 </body>

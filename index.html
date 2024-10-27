@@ -34,6 +34,7 @@
             background-color: #fff;
             border: 1px solid #ddd;
             white-space: pre-wrap;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -48,8 +49,12 @@
     <script>
         function encodeCode() {
             const code = document.getElementById('codeInput').value;
-            // This is a placeholder for the encoding logic. You can replace this with your encoding function.
-            const encoded = btoa(code); // Using Base64 encoding for simplicity.
+            if (code.trim() === '') {
+                document.getElementById('output').textContent = 'Please enter some code to encode.';
+                return;
+            }
+            // Base64 encoding
+            const encoded = btoa(unescape(encodeURIComponent(code)));
             document.getElementById('output').textContent = encoded;
         }
     </script>

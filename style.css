@@ -57,7 +57,7 @@ button:active {
 }
 footer {
     margin-top: auto;
-    padding: 30px; /* Increased padding */
+    padding: 0px; /* Increased padding */
     text-align: center;
     background-color: #007BFF;
     color: white;

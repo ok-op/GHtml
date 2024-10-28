@@ -34,6 +34,15 @@
             font-family: 'Courier New', monospace;
         }
 
+        .logo {
+            font-size: 24px;
+            width: 400px; /* Set width to 400px */
+            height: 100px; /* Set height to 100px */
+            color: #fff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
         .button-container {
             display: flex; /* Use flexbox for the button container */
             justify-content: center; /* Center align buttons */
@@ -102,7 +111,10 @@
     </style>
 </head>
 <body>
-    <h1>Python Code Encoder</h1>
+    <header>
+        <img src="https://i.imgur.com/JIgoU6J.png" alt="Logo" class="logo">
+        <h1 class="title">Encoder & Decoder</h1>
+    </header>
     <textarea id="codeInput" placeholder="Paste your Python code here..."></textarea>
     
     <div class="button-container"> <!-- Button container for centering -->

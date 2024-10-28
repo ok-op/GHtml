@@ -127,7 +127,7 @@
     
     <div class="button-container"> <!-- Button container for centering -->
         <button onclick="encodeCode()">Encode Code</button>
-        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        <button onclick="copyToClipboard()">Copy to Code</button>
     </div>
     
     <h2>Encoded Output:</h2>
@@ -159,7 +159,7 @@
             }
             navigator.clipboard.writeText(output.textContent)
                 .then(() => {
-                    alert('Encoded output copied to clipboard!');
+                    alert('Successfully Encoded Copied!');
                 })
                 .catch(err => {
                     console.error('Could not copy text: ', err);

@@ -1,7 +1,5 @@
 body{
     background-color: hsl(203, 4%, 65%) ;
-    width: 100%; 
-    text-align: center;
 }
 .hover {
     display: block;
@@ -13,7 +11,8 @@ body{
     width: 85%;
     margin: auto;
     margin-bottom: 15px;
-    style="width: 100%; text-align: center;">
+    width: 100%; 
+    text-align: center;
   } 
   
   .hover a{

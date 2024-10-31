@@ -5,7 +5,7 @@ body{
     display: block;
     cursor: pointer;
     background-color: hsl(0, 0%, 20%); 
-    color: white;
+    color: hsl(239, 100%, 50%);
     padding: 10px ; 
     border-radius:5px;
     width: 85%;
@@ -24,7 +24,7 @@ body{
     background-color: yellow;
     color: black;
     border: 2px solid green;
-    box-shadow: 3px 6px hsl(194, 100%, 50%);
+    box-shadow: 3px 6px hsl(239, 100%, 50%);
     border-top-color: hsl(194, 100%, 50%);
   }
   

@@ -5,16 +5,17 @@ body{
     display: block;
     cursor: pointer;
     background-color: hsl(0, 0%, 20%); 
-    color: hsl(239, 100%, 50%);
+    color: white;
     padding: 10px ; 
     border-radius:5px;
     width: 85%;
     margin: auto;
     margin-bottom: 15px;
+
   } 
   
   .hover a{
-    color: hsl(194, 100%, 50%);
+    color: white;
   }
 
   .hover a:hover{
@@ -23,8 +24,8 @@ body{
   .hover:hover {
     background-color: yellow;
     color: black;
-    border: 2px solid green;
-    box-shadow: 3px 6px hsl(239, 100%, 50%);
-    border-top-color: hsl(194, 100%, 50%);
+	border: 2px solid green;
+	box-shadow: 3px 6px red;
+	border-top-color: white;
   }
   

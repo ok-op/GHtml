@@ -24,7 +24,7 @@ body{
     background-color: yellow;
     color: black;
     border: 2px solid green;
-    box-shadow: 3px 6px white;
-    border-top-color: white;
+    box-shadow: 3px 6px #03fce3;
+    border-top-color: #03fce3;
   }
   

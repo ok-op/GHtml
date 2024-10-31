@@ -14,7 +14,7 @@ body{
   } 
   
   .hover a{
-    color: Board Brown;
+    color: hsl(194, 100%, 50%);
   }
 
   .hover a:hover{
@@ -24,7 +24,7 @@ body{
     background-color: yellow;
     color: black;
     border: 2px solid green;
-    box-shadow: 3px 6px Board Brown;
-    border-top-color: Board Brown;
+    box-shadow: 3px 6px hsl(194, 100%, 50%);
+    border-top-color: hsl(194, 100%, 50%);
   }
   

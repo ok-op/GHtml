@@ -1,0 +1,32 @@
+body{
+    background-color: hsl(203, 4%, 65%) ;
+}
+.hover {
+    display: block;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 20%); 
+    color: white;
+    padding: 8px ; 
+    border-radius:5px;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 15px;
+
+  } 
+  
+  .hover a{
+    color: white;
+  }
+
+  .hover a:hover{
+    color: black;
+  }
+  .hover:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 3px 6px Blue;
+    border-top-color: black;
+    border-radius: 50px 3px; 
+    border: 3px solid DeepSkyBlue;
+  }
+  

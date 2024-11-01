@@ -24,8 +24,8 @@
 }
 
 .box .inner:last-child {
-  background-color: lightcoral;
-  color: antiquewhite;
+  background-color: Black;
+  color: Navy;
   transform-origin: left;
   transform: perspective(100px) rotateY(15deg);
 }

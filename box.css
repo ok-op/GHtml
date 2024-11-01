@@ -12,9 +12,9 @@
 }
 
 .box .inner {
-  width: 150px;
-  height: 75px;
-  line-height: 75px;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
   font-size: 2em;
   font-family: sans-serif;
   font-weight: bold;

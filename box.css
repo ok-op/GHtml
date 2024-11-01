@@ -18,7 +18,7 @@
 
 .box .inner:first-child {
   background-color: DeepSkyBlue;
-  color: Aqua;
+  color: DeepSkyBlue;
   transform-origin: right;
   transform: perspective(100px) rotateY(-15deg);
 }

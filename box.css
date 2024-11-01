@@ -1,5 +1,7 @@
 .box {
+  position: fixed;
   display: flex;
+  padding: 6px;
   top: 0;
 }
 

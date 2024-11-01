@@ -14,7 +14,6 @@
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-radius: 50px 15px; 
 }
 
 .box .inner:first-child {

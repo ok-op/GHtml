@@ -1,7 +1,6 @@
 .box {
   position: fixed;
   display: flex;
-  align-items: center;
   padding: 6px;
   top: 0;
 }

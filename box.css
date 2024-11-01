@@ -14,6 +14,12 @@
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
+  border-radius: 50px 15px; 
+  padding: 10px; 
+  border: 5px solid yellow; 
+  border-right-color: DeepSkyBlue; 
+  box-shadow: 5px 10px; 
+  border-top-color: DeepSkyBlue;
 }
 
 .box .inner:first-child {

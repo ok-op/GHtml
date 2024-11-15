@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="WOODcraft SudoR2spr" />
+    <meta name="keywords" content="WDzone, WDZONE, Base64, encoded, code, Code" />
+    <meta name="description" content="WDZONE Website Service How to use the Base64 encoded code." />
+    <meta property="og:description" content="WDZONE Website Service How to use the Base64 encoded code.">
+    <meta charset='utf-8' content='text/html' http-equiv='content-type' />
+    <meta content='https://i.imgur.com/MDgFhvL.png' property='og:image' />
+    <link href='https://i.imgur.com/MDgFhvL.png' rel='shortcut icon' type='image/vnd.microsoft.icon' />
+    <link href='https://i.imgur.com/MDgFhvL.png' rel='apple-touch-icon' />	
+	<link rel="icon" href="https://i.imgur.com/E5zwKTY.png" type="image/x-icon" />
+    <title>Code Snippets with html Functionality</title>  
+    <link rel="stylesheet" href="woodcraft/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <h1><i class="fa fa-code" aria-hidden="true"></i> How to use the Base64 encoded code Functionality</h1>
+    
+	<!-- First code snippet container -->
+    <div class="wood-code-container">
+        <div class="wood-description"><i class="fa fa-code" aria-hidden="true"></i> To use the Base64 encoded code in the encoded.py file in your project, 
+it must first be decoded and then executed. The main.py and Requirement.txt files will remain directly as they are. 
+Below is an example of decoding the code in the encoded.py file:
+
+Step 1: Decode the Base64 encoded code
+
+Step 2: Execute the decoded code 👇 example encoded.py</div>
+        <div class="wood-code-box">
+            <pre id="code0">
+import base64
+
+# Base64 encoded encoded.py code
+encoded_code = b"ZGVmIGRvdWJsZV9udW1iZXIobik6CiAgICByZXR1cm4gbiAqIDIKCm51bWJlciA9IDUKcmVzdWx0ID0gZG91YmxlX251bWJlcihudW1iZXIpCnByaW50KGYiVGhlIGRvdWJsZSBvZiB7bnVtYmVyfSBpcyB7cmVzdWx0fSIp"
+
+# Base64 decode encoded.py code
+decoded_code = base64.b64decode(encoded_code).decode('utf-8')
+
+# Execute the decoded code
+exec(decoded_code)</pre>
+            <button class="hover" onclick="copyToClipboard('code0')"><i class="fa fa-clone" aria-hidden="true"></i> Copy Code</button>
+			<!-- Extra button with link -->
+            <button class="hover" onclick="openLink0()"><i class="fa fa-file-code-o" aria-hidden="true"></i> See the encoded.py</button>
+        </div>
+    </div>
+	
+	<!-- Second code snippet container -->
+    <div class="wood-code-container">
+        <div class="wood-description"><i class="fa fa-code" aria-hidden="true"></i> Example Creating a setup.py file:</div>
+        <div class="wood-code-box">
+            <pre id="code1">from setuptools import setup
+
+setup(
+    name='encoded',  # The name of the package
+    version='0.1',
+    py_modules=['encoded'],
+    install_requires=[
+        'requests',  # Your other dependencies
+        'Flask',
+    ],
+)</pre>
+            <button class="hover" onclick="copyToClipboard('code1')"><i class="fa fa-clone" aria-hidden="true"></i> Copy Code</button>
+			<!-- Extra button with link -->
+            <button class="hover" onclick="openLink1()"><i class="fa fa-file-code-o" aria-hidden="true"></i> See the setup.py</button>
+        </div>
+    </div>
+	
+    <!-- First code snippet container -->
+    <div class="wood-code-container">
+        <div class="wood-description"><i class="fa fa-code" aria-hidden="true"></i> Example import the code in the main.py file:</div>
+        <div class="wood-code-box">
+            <pre id="code2">import os
+import requests
+from encoded import *  # Import everything from encoded.py</pre>
+            <button class="hover" onclick="copyToClipboard('code2')"><i class="fa fa-clone" aria-hidden="true"></i> Copy Code</button>
+			<!-- Extra button with link -->
+            <button class="hover" onclick="openLink2()"><i class="fa fa-file-code-o" aria-hidden="true"></i> See the main.py</button>
+        </div>
+    </div>
+
+    <!-- Second code snippet container -->
+    <div class="wood-code-container">
+        <div class="wood-description"><i class="fa fa-code" aria-hidden="true"></i> Example Change the requirements.txt file:</div>
+        <div class="wood-code-box">
+            <pre id="code3">git+https://github.com/SudoR2spr/example
+requests</pre>
+            <button class="hover" onclick="copyToClipboard('code3')"><i class="fa fa-clone" aria-hidden="true"></i> Copy Code</button>
+			<!-- Extra button with link -->
+            <button class="hover" onclick="openLink3()"><i class="fa fa-file-code-o" aria-hidden="true"></i> See the requirements.txt</button>
+        </div>
+    </div>
+	
+	<!-- Second code snippet container -->
+    <div class="wood-code-container">
+        <div class="wood-description"><i class="fa fa-code" aria-hidden="true"></i> Example Creating a Dockerfile file as a Python file</div>
+        <div class="wood-code-box">
+            <pre id="code4">
+# Back4App WOODcraft
+# Official Python image from the Docker Hub
+FROM python:3.9
+
+# Set the working directory in Docker
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose port 5000 for Flask
+EXPOSE 5000
+
+# Run Flask app when the container launches
+CMD ["python", "main.py"]</pre>
+            <button class="hover" onclick="copyToClipboard('code4')"><i class="fa fa-clone" aria-hidden="true"></i> Copy Code</button>
+			<!-- Extra button with link -->
+            <button class="hover" onclick="openLink4()"><i class="fa fa-file-code-o" aria-hidden="true"></i> See the Dockerfile</button>
+        </div>
+    </div>
+
+    <!-- Third code snippet container -->
+    <div class="wood-code-container">
+        <div class="wood-description"><i class="fa fa-telegram" aria-hidden="true"></i> Join the group and ask if there is any difficulty</div>
+		<h4>And two more features will be added which will be more easy method and no one will find your Repo, Thanks to all ❤️ By : WOODctaft</h4>
+        <div class="wood-code-box">
+            <!-- Extra button with link -->
+            <center> <button class="hover" onclick="openLink5()"><i class="fa fa-telegram" aria-hidden="true"></i> ❖ 𝐖𝐃 𝐙𝐎𝐍𝐄 ❖ ™</button>
+			<button class="hover" onclick="openLink6()"><i class="fa fa-telegram" aria-hidden="true"></i> WD Topic Group ™</button>
+        </div>
+    </div>
+	
+	<script src="woodcraft/woodcraft.js"></script>
+	</div>
+</div>
+
+    <footer>
+        <p><i class="fa fa-telegram" aria-hidden="true"></i> Made with ❤️ By <a href="https://t.me/Farooq_is_king" target="_blank">𝐖𝐎𝐎𝐃𝐜𝐫𝐚𝐟𝐭</a></p>
+    </footer>
+</body>
+
+</html>

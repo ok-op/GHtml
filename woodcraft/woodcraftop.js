@@ -41,7 +41,7 @@
         setInterval(drawMatrix, 90);
 
         // Create the audio element and set it to autoplay
-		const audio = new Audio("music/Love-Your-Voice.MP3"); // Replace with your audio file path
+		const audio = new Audio("music/Love-Your-Voice.mp3"); // Replace with your audio file path
 		audio.loop = true; // Loop music
 
 		// Auto-play music on page load
